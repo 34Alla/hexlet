@@ -1,0 +1,65 @@
+{
+  "id": "4cd19b8f-30b3-4478-b0b0-5f714bb9672c",
+  "version": "2.0",
+  "name": "forma vxoda",
+  "url": "https://qa.neapro.site/login",
+  "tests": [{
+    "id": "6cb956fb-74b7-4011-8fd1-7178cf32e92d",
+    "name": "login",
+    "commands": [{
+      "id": "2edcc72d-9032-4dd4-b5f2-0802e8130031",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a7b091d-271b-4dce-9735-8048f99b09f2",
+      "comment": "",
+      "command": "type",
+      "target": "css=.fieldset:nth-child(1) input",
+      "targets": [
+        ["css=.fieldset:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div/div/div/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "test@test.ru"
+    }, {
+      "id": "8d56fc4d-7eed-47c0-ae2f-84d17c8a012c",
+      "comment": "",
+      "command": "type",
+      "target": "css=.fieldset:nth-child(2) input",
+      "targets": [
+        ["css=.fieldset:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@type='password']", "xpath:attributes"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div/div/div/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "767c9ce9-867a-4802-9c4e-f920f025ac3f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='__layout']/div/section/div[2]/div/div/div/form/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Подтвердить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a868a0ac-9d00-486f-810a-6afcabf9251c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6cb956fb-74b7-4011-8fd1-7178cf32e92d"]
+  }],
+  "urls": ["https://qa.neapro.site/login"],
+  "plugins": []
+}
